@@ -54,7 +54,7 @@ const Home = () => {
           <Text style={styles.trailReviewTitle}>TRAIL REVIEW</Text>
           <Image
             style={styles.trailImage}
-            source={require('../assets/images/trail-image.png')}
+            source={require('../assets/images/trail-image.jpg')}
           />
           <Text style={styles.trailReviewPark1}>ASHPALT</Text>
           <Text style={styles.trailReviewPark2}>NATIONAL PARK</Text>
@@ -101,16 +101,56 @@ const styles = StyleSheet.create({
   },
   adImage2Row: {flexDirection: 'row'},
   adImage2: {height: 180, width: '50%', resizeMode: 'contain'},
-  adTitle2: {},
-  adText2: {},
-  adContent2: {},
-  trailReview: {},
-  trailReviewTitle: {},
-  trailImage: {},
-  trailReviewPark1: {},
-  trailReviewPark2: {},
-  trailButton: {},
-  trailButtonText: {},
+  adTitle2: {
+    textAlign: 'center',
+    fontFamily: 'OpenSans-Bold',
+    fontSize: 15,
+    color: '#8B8B8B',
+  },
+  adText2: {
+    textAlign: 'center',
+    fontFamily: 'OpenSans-ExtraBold',
+    fontSize: 15,
+    color: 'FC8A49',
+  },
+  adContent2: {
+    textAlign: 'center',
+    fontFamily: 'OpenSans-Regular',
+    fontSize: 10,
+    color: '#000000',
+    paddingBottom: 20,
+  },
+  trailReview: {
+    backgroundColor: '#000000',
+    alignItems: 'center',
+    paddingBottom: 30,
+  },
+  trailReviewTitle: {
+    fontFamily: 'OpenSans-BoldItalic',
+    fontSize: 30,
+    color: '#FFFFFF',
+  },
+  trailImage: {
+    height: 220,
+    width: '100%',
+  },
+  trailReviewPark1: {fontFamily: 'OpenSans-Bold', fontSize: 45, width: '100%'},
+  trailReviewPark2: {
+    fontFamily: 'OpenSans-Regular',
+    fontSize: 20,
+    color: '#FFFFFF',
+    paddingBottom: 10,
+  },
+  trailButton: {
+    width: '50%',
+    backgroundColor: '#FC8A49',
+    alignItems: 'center',
+    borderRadius: 5,
+  },
+  trailButtonText: {
+    fontSize: 25,
+    color: '#FFFFFF',
+  },
 });
 
 export default Home;
