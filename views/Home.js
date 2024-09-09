@@ -15,8 +15,8 @@ const Home = () => {
   const [searchText, setSearchText] = useState('What can we help you find?');
   return (
     <View style={styles.container}>
+      <Header />
       <ScrollView>
-        <Header />
         <View style={styles.searchRow}>
           <TextInput
             style={styles.searchInput}
@@ -62,8 +62,8 @@ const Home = () => {
             <Text style={styles.trailButtonText}>SEE REVIEW</Text>
           </TouchableOpacity>
         </View>
+        <Footer />
       </ScrollView>
-      <Footer />
     </View>
   );
 };
@@ -89,7 +89,9 @@ const styles = StyleSheet.create({
     fontSize: 30,
   },
   adText1: {
-    ...styles.adTitle1,
+    textAlign: 'center',
+    fontFamily: 'OpenSans-ExtraBold',
+    fontSize: 30,
     color: '#FFFFFF',
   },
   adContent1: {

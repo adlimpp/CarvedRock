@@ -1,9 +1,9 @@
 import {Image, StyleSheet, View} from 'react-native';
 const styles = StyleSheet.create({
   container: {paddingTop: 5},
-  headerRow: {flexDirection: 'row'},
-  imageStyle: {height: 100, width: '50%'},
-  menu: {alignSelf: 'center', marginLeft: 150},
+  headerRow: {flexDirection: 'row', justifyContent: 'space-between', padding:10},
+  imageStyle: {height: 50, width: 50},
+  menu: {alignSelf: 'center', marginLeft: 150, height: 50, width: 50},
 });
 const Header = () => {
   return (
