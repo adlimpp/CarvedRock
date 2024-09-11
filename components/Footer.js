@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import {useState} from 'react';
 import {
   StyleSheet,
@@ -8,6 +9,7 @@ import {
 } from 'react-native';
 
 const Footer = () => {
+  const navigation = useNavigation();
   const [email, setEmail] = useState('Enter email address');
   return (
     <View>
@@ -26,7 +28,31 @@ const Footer = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.contianer}>
-        <Text style={styles.support}>Customer Support</Text>
+        <Text style={styles.support}>CUSTOMER SUPPORT</Text>
+        <Text
+          style={styles.supportOptions}
+          onPress={() => navigation.navigate('Contact')}>
+          CONTACT US
+        </Text>
+        <Text style={styles.supportOptions}>ORDER TRACKER</Text>
+        <Text style={styles.supportOptions}>RETURN & REFUNDS</Text>
+        <Text style={styles.supportOptions}>SIZING STORE LOCATOR</Text>
+        <Text style={styles.supportOptions}>SITE MAP</Text>
+      </View>
+      <View style={styles.contianer}>
+        <Text style={styles.support}>CUSTOMER INFO</Text>
+        <Text
+          style={styles.supportOptions}
+          onPress={() => navigation.navigate('About')}>
+          ABOUT
+        </Text>
+        <Text
+          style={styles.supportOptions}
+          onPress={() => navigation.navigate('Careers')}>
+          CAREERS
+        </Text>
+        <Text style={styles.supportOptions}>PRIVACY & TERMS</Text>
+        <Text style={styles.supportOptions}>FOLLOW US</Text>
       </View>
     </View>
   );
