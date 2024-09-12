@@ -5,6 +5,7 @@ import About from './views/About';
 import Careers from './views/Careers';
 import Contact from './views/Contact';
 import Trail from './views/Trail';
+import TrailDetail from './views/TrailDetail';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +13,11 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
+      <Stack.Screen
+          name="TrailDetail"
+          component={TrailDetail}
+          options={{title: 'Trail Detail'}}
+        />
         <Stack.Screen
           name="Trail"
           component={Trail}

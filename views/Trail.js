@@ -14,11 +14,14 @@ import Footer from '../components/Footer';
 
 const TrailItem = ({id, title, author, review, image}) => {
   const navigation = useNavigation();
+  const dataToPass = {id, title, author, review, image}
   return (
     <View style={styles.item}>
       <Text
         style={styles.title}
-        onPress={() => navigation.navigate('TrailDetail', {id})}>
+        onPress={() =>
+          navigation.navigate('TrailDetail', {dataToPass})
+        }>
         {title}
       </Text>
       <Image style={styles.trialImage} source={{uri: image}} />
@@ -36,7 +39,7 @@ const Trail = props => {
       const data = await axios.get(
         'https://52fb39dd-35c6-4456-adc1-c4f1dcc59767.mock.pstmn.io/trailreviews',
       );
-      console.log('DATA', data.data);
+      // console.log('DATA', data.data);
       setRemoteData(data.data || []);
     } catch (e) {
       console.log(e);
@@ -49,7 +52,6 @@ const Trail = props => {
     getData();
   }, []);
 
-  console.log({remoteData});
   return (
     <View style={styles.container}>
       <Header />
