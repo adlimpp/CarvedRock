@@ -12,9 +12,12 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 const About = props => {
   const navigation = useNavigation();
-  const intro = `Whether attacking the mountain that is the top of your bucket list, or attacking a challenging climbing wall, we have you covered. We constantly upgrade our stock with the newest and best gear. We Pride ourselves on stocking the best and the safest gear. And of course prices are great!`;
-  const bio = `CarvedRock started for purely selfish regions. Our founder, John Doe, was an adventurer from the start. Between rafting on the Amazon and climbing Everest he tries to do it all. Expreriences were important. Over time he learned finding the best gear was a job of its own. Boots from their store, tents and climbing supplies from another. John wished there was a one stop shop for this. Since he couldn't find what he wanted, then CarvedRock was born`;
-  const stores = `stores rtoasdaj asdasjduias asndjas baskdbjasjdabdasdkbsa asjkdnjasjdkandkjnajskddjas`;
+  const intro = `Whether attacking the mountain that is the top of your bucket list, or attacking a challenging climbing wall, we have you covered. We constantly upgrade our stock with the newest and bset gear. We pride ourselves on stocking the best and the safest gear. And of course our prices are great!`
+
+  const bio = `CarvedRock started for purely selfish regions. Our founder, John Doe, was an adventurer from the start. Between rafting on the Amazon and climbing Everest he tried to do it all. Experiences were important. Over time he learned finding the best gear was a job of its own. boots from thie store, tents and climbing supplies from another. John wished there was a one stop sho for this. Since he couldnt find what he wanted, then CarvedRock was born`
+
+  const stores = `With 15 locations across 6 States you may find a brick and mortar location nearby. No worries if a store is not close, you can alswy shop on CarvedRock.com. And now with our new mobile app you will even be able to shop directly from your mobile device.`
+
   const styles = StyleSheet.create({
     container: {flex: 1},
     imageStyle: {height: 200, width: '100%', marginBottom: 20},

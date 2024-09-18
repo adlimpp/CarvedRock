@@ -10,10 +10,11 @@ import {
 } from 'react-native';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
+import Shops from '../components/Shops';
 
 const Home = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   const [searchText, setSearchText] = useState('What can we help you find?');
   return (
     <View style={styles.container}>
@@ -60,10 +61,36 @@ const Home = () => {
           />
           <Text style={styles.trailReviewPark1}>ASHPALT</Text>
           <Text style={styles.trailReviewPark2}>NATIONAL PARK</Text>
-          <TouchableOpacity style={styles.trailButton} onPress={()=>navigation.navigate("Trail")}>
+          <TouchableOpacity
+            style={styles.trailButton}
+            onPress={() => navigation.navigate('Trail')}>
             <Text style={styles.trailButtonText}>SEE REVIEW</Text>
           </TouchableOpacity>
         </View>
+        <Shops
+          imageSrc={'https://i.imgur.com/M2nMlMw.jpg'}
+          title="TOP TIER GEAR"
+          description="BROWSE ALL GEAR"
+          target="Store"
+        />
+        <Shops
+          imageSrc={'https://i.imgur.com/GvAlRYf.jpg'}
+          title="HAPPY FEET"
+          description="BROWSE BOOTS"
+          target="BootShop"
+        />
+        <Shops
+          imageSrc={'https://i.imgur.com/dWRyUvS.jpg'}
+          title="MEET AT THE TOP"
+          description="BROWSE CLIMBING GEAR"
+          target="ClimbingShop"
+        />
+        <Shops
+          imageSrc={'https://i.imgur.com/9gd1dpm.jpg'}
+          title="MAKE A SPLASH"
+          description="BROWSE KAYAKS"
+          target="KayakShop"
+        />
         <Footer />
       </ScrollView>
     </View>
